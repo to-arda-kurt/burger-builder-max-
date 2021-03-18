@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import BuildControls from "../../componenets/Burger/BuildControls/BuildControls";
 import Burger from "../../componenets/Burger/Burger";
+import Modal from "../../componenets/UI/Modal/Modal"
 
 const INGREDIENT_PRICES = {
     salad: 0.5,
@@ -82,6 +83,8 @@ class BurgerBuilder extends Component {
         }
         return (
             <>
+                <Modal/>
+                {/*<OrderSummart ingredients={}></OrderSummart>*/}
                 <Burger ingredients={this.state.ingredients}/>
                 <BuildControls
                     ingredientsAdded={this.addIngredientHandler}
