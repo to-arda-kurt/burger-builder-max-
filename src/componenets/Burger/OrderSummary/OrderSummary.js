@@ -1,3 +1,5 @@
+import Button from "../../UI/Button/Button";
+
 const orderSummary = (props) => {
   const ingSum = props.ingredients;
 
@@ -13,6 +15,8 @@ const orderSummary = (props) => {
       <ul>{ingredientSummary}</ul>
       <p>Total Price: £{props.price.toFixed(2)}</p>
       <p>Checkout?</p>
+      <Button clicked={props.cancelOrder}>Cancel</Button>
+      <Button clicked={props.purchaseOrder}>Order</Button>
     </>
   );
 };
