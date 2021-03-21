@@ -1,8 +1,19 @@
 import React, { Component } from "react";
 import classes from "./Modal.module.css";
 
+
+
 class Modal extends Component {
-  render() {
+    //MODAL Will be rendered only the props.show return true for performance improvement.
+    // This will be converted to functional component
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+            return nextProps.show !== this.props.show
+    }
+    componentDidUpdate() {
+        console.log('MODAL WILLUPDATE')
+    }
+
+    render() {
     return (
       <>
         <div

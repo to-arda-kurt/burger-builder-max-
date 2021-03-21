@@ -87,6 +87,7 @@ class BurgerBuilder extends Component {
     const disableInfo = {
       ...this.state.ingredients,
     };
+
     //Return True or False from Ingredients
     //Return false for <= 0 -->> disableInfo[key] <= 0
     //Disable - Button
